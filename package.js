@@ -1,7 +1,7 @@
 Package.describe({
   summary: "Expressive, dynamic, robust CSS",
   name: "mquandalle:stylus",
-  version: "1.0.3"
+  version: "1.0.4"
 });
 
 Package._transitional_registerBuildPlugin({
