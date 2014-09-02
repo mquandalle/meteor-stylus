@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "nib": {
-      "version": "1.0.2",
+      "version": "1.0.3",
       "dependencies": {
         "stylus": {
           "version": "0.37.0",
@@ -13,7 +13,12 @@
               "version": "0.3.5"
             },
             "debug": {
-              "version": "0.7.4"
+              "version": "2.0.0",
+              "dependencies": {
+                "ms": {
+                  "version": "0.6.2"
+                }
+              }
             },
             "sax": {
               "version": "0.5.8"
@@ -23,7 +28,7 @@
       }
     },
     "stylus": {
-      "version": "0.46.3",
+      "version": "0.48.1",
       "dependencies": {
         "css-parse": {
           "version": "1.7.0"
@@ -32,7 +37,7 @@
           "version": "0.3.5"
         },
         "debug": {
-          "version": "1.0.1",
+          "version": "2.0.0",
           "dependencies": {
             "ms": {
               "version": "0.6.2"
@@ -58,6 +63,14 @@
                   "version": "1.0.0"
                 }
               }
+            }
+          }
+        },
+        "source-map": {
+          "version": "0.1.38",
+          "dependencies": {
+            "amdefine": {
+              "version": "0.1.0"
             }
           }
         }

@@ -1,5 +1,6 @@
 Package.describe({
-  summary: 'Expressive, dynamic, robust CSS',
+  summary: "Expressive, dynamic, robust CSS",
+  name: "mquandalle:stylus",
   version: "1.0.3"
 });
 
@@ -9,11 +10,11 @@ Package._transitional_registerBuildPlugin({
   sources: [
     'plugin/compile-stylus.js'
   ],
-  npmDependencies: { stylus: "0.46.3", nib: "1.0.3" }
+  npmDependencies: { stylus: "0.48.1", nib: "1.0.3" }
 });
 
 Package.on_test(function (api) {
-  api.use(['tinytest', 'stylus', 'test-helpers', 'templating']);
+  api.use(['tinytest', 'mquandalle:stylus', 'test-helpers', 'templating']);
   api.add_files([
     'stylus_tests.html',
     'stylus_tests.styl',
