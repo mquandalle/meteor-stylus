@@ -21,3 +21,16 @@ Tinytest.add("stylus - @import", function(test) {
     test.equal(getStyleProperty(this, 'border-left-style'), "dashed");
   });
 });
+
+Tinytest.add("stylus - nib", function(test) {
+  setDomElement('<p class="stylus-nib-overflow-ellipsis"></p>', function () {
+    test.equal(getStyleProperty(this, 'overflow'), "hidden");
+    test.equal(getStyleProperty(this, 'text-overflow'), "ellipsis");
+  });
+});
+
+Tinytest.add("stylus - jeet", function(test) {
+  setDomElement('<p class="stylus-jeet-center"></p>', function () {
+    test.equal(getStyleProperty(this, 'max-width'), "1337px");
+  });
+});

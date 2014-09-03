@@ -23,6 +23,8 @@ Package.on_test(function (api) {
   api.add_files([
     'tests/stylus_tests.styl',
     'tests/stylus_tests.import.styl',
+    'tests/nib_tests.styl',
+    'tests/jeet_tests.styl',
     'tests/stylus_tests.js'
   ],'client');
 });
