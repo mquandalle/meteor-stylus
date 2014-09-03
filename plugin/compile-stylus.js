@@ -21,6 +21,9 @@ Plugin.registerSourceHandler("styl", {archMatching: 'web'}, function (compileSte
         message: "Stylus compiler error: " + e.message
       });
     } else {
+      // XXX We have to manually modify the source map object since stylus
+      // compiler doesn't support the `sourcesContent` field yet
+      // see https://github.com/LearnBoost/stylus/issues/1677
       var sourceMap = compiler.sourcemap;
       sourceMap.sourcesContent = [source];
       compileStep.addStylesheet({
