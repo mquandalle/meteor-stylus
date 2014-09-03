@@ -1,6 +1,7 @@
 var fs = Npm.require('fs');
 var stylus = Npm.require('stylus');
 var nib = Npm.require('nib');
+var jeet = Npm.require('jeet');
 var path = Npm.require('path');
 var Future = Npm.require('fibers/future');
 
@@ -8,6 +9,7 @@ Plugin.registerSourceHandler("styl", {archMatching: 'web'}, function (compileSte
   var source = compileStep.read().toString('utf8');
   var compiler = stylus(source)
     .use(nib())
+    .use(jeet())
     .set('filename', compileStep.inputPath)
     .set('sourcemap', {comment: false})
     // Include needed to allow relative @imports in stylus files
