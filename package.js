@@ -1,7 +1,7 @@
 Package.describe({
   summary: "Expressive, dynamic, robust CSS",
   name: "mquandalle:stylus",
-  version: "1.0.4",
+  version: "1.0.5",
   git: "https://github.com/mquandalle/meteor-stylus.git"
 });
 
