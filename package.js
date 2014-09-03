@@ -19,11 +19,10 @@ Package._transitional_registerBuildPlugin({
 });
 
 Package.on_test(function (api) {
-  api.use(['tinytest', 'mquandalle:stylus', 'test-helpers', 'templating']);
+  api.use(['tinytest', 'mquandalle:stylus', 'test-helpers']);
   api.add_files([
-    'stylus_tests.html',
-    'stylus_tests.styl',
-    'stylus_tests.import.styl',
-    'stylus_tests.js'
+    'tests/stylus_tests.styl',
+    'tests/stylus_tests.import.styl',
+    'tests/stylus_tests.js'
   ],'client');
 });
