@@ -1,0 +1,12 @@
+@import "relative.import.styl"
+@import "tests/absolute.import.styl"
+
+.stylus-overwrite-size
+  // This property is overwritten in relative.import.styl
+  font-size: 10px
+
+.stylus-relative-import-dashy-border
+  border-left: 1px relativeImportDashy black
+
+.stylus-absolute-import-dashy-border
+  border-left: 1px absoluteImportDashy black

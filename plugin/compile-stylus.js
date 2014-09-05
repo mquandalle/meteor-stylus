@@ -14,8 +14,8 @@ Plugin.registerSourceHandler("styl", {archMatching: 'web'}, function (compileSte
     .use(rupture())
     .set('filename', compileStep.inputPath)
     .set('sourcemap', {comment: false})
-    // Include needed to allow relative @imports in stylus files
-    .include(path.dirname(compileStep._fullInputPath));
+    .include(path.dirname(compileStep._fullInputPath)) // relative @import
+    .include(process.cwd()); // absolute @import
 
   compiler.render(function (err, css) {
     if (err) {

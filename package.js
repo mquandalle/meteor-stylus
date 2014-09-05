@@ -22,8 +22,10 @@ Package._transitional_registerBuildPlugin({
 Package.on_test(function (api) {
   api.use(['tinytest', 'mquandalle:stylus', 'test-helpers']);
   api.add_files([
-    'tests/stylus_tests.styl',
-    'tests/stylus_tests.import.styl',
+    'tests/presence.styl',
+    'tests/importer.styl',
+    'tests/relative.import.styl',
+    'tests/absolute.import.styl',
     'tests/nib_tests.styl',
     'tests/jeet_tests.styl',
     'tests/rupture_tests.styl',
