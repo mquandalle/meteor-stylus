@@ -34,3 +34,9 @@ Tinytest.add("stylus - jeet", function(test) {
     test.equal(getStyleProperty(this, 'max-width'), "1337px");
   });
 });
+
+Tinytest.add("stylus - rupture", function(test) {
+  setDomElement('<p class="stylus-rubture-aboveOneIsBlack"></p>', function () {
+    test.equal(getStyleProperty(this, 'color'), "rgb(0, 0, 0)");
+  });
+});

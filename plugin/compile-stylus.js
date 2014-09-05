@@ -2,6 +2,7 @@ var fs = Npm.require('fs');
 var stylus = Npm.require('stylus');
 var nib = Npm.require('nib');
 var jeet = Npm.require('jeet');
+var rupture = Npm.require('rupture');
 var path = Npm.require('path');
 var Future = Npm.require('fibers/future');
 
@@ -10,6 +11,7 @@ Plugin.registerSourceHandler("styl", {archMatching: 'web'}, function (compileSte
   var compiler = stylus(source)
     .use(nib())
     .use(jeet())
+    .use(rupture())
     .set('filename', compileStep.inputPath)
     .set('sourcemap', {comment: false})
     // Include needed to allow relative @imports in stylus files

@@ -14,7 +14,8 @@ Package._transitional_registerBuildPlugin({
   npmDependencies: {
     stylus: "0.48.1",
     nib: "1.0.3",
-    jeet: "5.3.0"
+    jeet: "5.3.0",
+    rupture: "0.4.0"
   }
 });
 
@@ -25,6 +26,7 @@ Package.on_test(function (api) {
     'tests/stylus_tests.import.styl',
     'tests/nib_tests.styl',
     'tests/jeet_tests.styl',
+    'tests/rupture_tests.styl',
     'tests/stylus_tests.js'
   ],'client');
 });
