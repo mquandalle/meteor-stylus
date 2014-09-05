@@ -26,9 +26,9 @@ Package.on_test(function (api) {
     'tests/importer.styl',
     'tests/relative.import.styl',
     'tests/absolute.import.styl',
-    'tests/nib_tests.styl',
-    'tests/jeet_tests.styl',
-    'tests/rupture_tests.styl',
-    'tests/stylus_tests.js'
+    'tests/nib_.styl',
+    'tests/jeet_.styl',
+    'tests/rupture_.styl',
+    'tests/tinytest.js'
   ],'client');
 });
