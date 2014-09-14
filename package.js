@@ -14,7 +14,7 @@ Package._transitional_registerBuildPlugin({
   npmDependencies: {
     stylus: "0.48.1",
     nib: "1.0.3",
-    jeet: "5.3.0",
+    jeet: "6.0.0",
     rupture: "0.4.0"
   }
 });
