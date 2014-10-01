@@ -17,12 +17,17 @@ Plugin.registerSourceHandler("styl", {archMatching: 'web'}, function (compileSte
     .include(path.dirname(compileStep._fullInputPath)) // relative @import
     .include(process.cwd()); // absolute @import
 
-  compiler.render(function (err, css) {
-    if (err) {
-      compileStep.error({
-        message: "Stylus compiler error: " + e.message
-      });
-    } else {
+  var errCb = function(msg) {
+    compileStep.error({
+      message: "Stylus compiler error: " + msg
+    });
+  }
+
+  try {
+    compiler.render(function (err, css) {
+      if (err) {
+        return errCb(err.message)
+      }
       var sourceMap = compiler.sourcemap;
       sourceMap.sourcesContent = [source];
       compileStep.addStylesheet({
@@ -30,13 +35,12 @@ Plugin.registerSourceHandler("styl", {archMatching: 'web'}, function (compileSte
         data: css,
         sourceMap: JSON.stringify(sourceMap)
       });
-    }
-  });
+    });
+  } catch(err) {
+    errCb(err.message);
+  }
 });
 
 // Register import.styl files with the dependency watcher, without actually
 // processing them. There is a similar rule in the less package.
-Plugin.registerSourceHandler("import.styl", function () {
-  // Do nothing
-});
-
+Plugin.registerSourceHandler("import.styl", function () {});
