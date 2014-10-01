@@ -1,16 +1,16 @@
 {
   "dependencies": {
     "jeet": {
-      "version": "6.0.0"
+      "version": "6.1.2"
     },
     "nib": {
-      "version": "1.0.3",
+      "version": "1.0.4",
       "dependencies": {
         "stylus": {
-          "version": "0.37.0",
+          "version": "0.45.1",
           "dependencies": {
-            "cssom": {
-              "version": "0.2.5"
+            "css-parse": {
+              "version": "1.7.0"
             },
             "mkdirp": {
               "version": "0.3.5"
@@ -25,6 +25,25 @@
             },
             "sax": {
               "version": "0.5.8"
+            },
+            "glob": {
+              "version": "3.2.11",
+              "dependencies": {
+                "inherits": {
+                  "version": "2.0.1"
+                },
+                "minimatch": {
+                  "version": "0.3.0",
+                  "dependencies": {
+                    "lru-cache": {
+                      "version": "2.5.0"
+                    },
+                    "sigmund": {
+                      "version": "1.0.0"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -34,7 +53,7 @@
       "version": "0.4.0"
     },
     "stylus": {
-      "version": "0.48.1",
+      "version": "0.49.1",
       "dependencies": {
         "css-parse": {
           "version": "1.7.0"
@@ -73,7 +92,7 @@
           }
         },
         "source-map": {
-          "version": "0.1.38",
+          "version": "0.1.39",
           "dependencies": {
             "amdefine": {
               "version": "0.1.0"
