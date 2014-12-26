@@ -1,7 +1,7 @@
 Package.describe({
   summary: "Expressive, dynamic, robust CSS",
   name: "mquandalle:stylus",
-  version: "1.0.8",
+  version: "1.0.9",
   git: "https://github.com/mquandalle/meteor-stylus.git"
 });
 
@@ -15,7 +15,7 @@ Package._transitional_registerBuildPlugin({
     stylus: "0.49.3",
     nib: "1.0.4",
     jeet: "6.1.2",
-    rupture: "0.4.0"
+    rupture: "0.6.1"
   }
 });
 
