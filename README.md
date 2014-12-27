@@ -5,15 +5,20 @@ simple syntax and expressive dynamic behaviour. It allows for more compact
 stylesheets and helps reduce code duplication in CSS files.
 
 With the stylus package installed, `.styl` files in your application are
-automatically compiled to CSS and the results are included in the client CSS
-bundle along with the corresponding source map in development environment.
+automatically compiled to CSS and the results are included in the client CSS.
+
+## Source Maps
+
+This package also automatically provide source map in the development
+environment, so that you can read your original stylus file in the debugger
+tools of the browser.
 
 ## Imports
 
 If you want to `@import` a file, give it the extension `.import.styl` to prevent
 Meteor from processing it independently.
 
-This packages suppports both relative and absolute `@import`. Absolute `@import`
+This packages supports both relative and absolute `@import`. Absolute `@import`
 are relative to your root meteor application directory, you shouldn't precede
 its path by `/`.
 
