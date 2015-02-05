@@ -4,10 +4,10 @@
       "version": "6.1.2"
     },
     "nib": {
-      "version": "1.0.4",
+      "version": "1.1.0",
       "dependencies": {
         "stylus": {
-          "version": "0.45.1",
+          "version": "0.49.3",
           "dependencies": {
             "css-parse": {
               "version": "1.7.0"
@@ -16,7 +16,7 @@
               "version": "0.3.5"
             },
             "debug": {
-              "version": "2.0.0",
+              "version": "2.1.1",
               "dependencies": {
                 "ms": {
                   "version": "0.6.2"
@@ -44,6 +44,14 @@
                   }
                 }
               }
+            },
+            "source-map": {
+              "version": "0.1.43",
+              "dependencies": {
+                "amdefine": {
+                  "version": "0.1.0"
+                }
+              }
             }
           }
         }
@@ -53,7 +61,7 @@
       "version": "0.6.1"
     },
     "stylus": {
-      "version": "0.49.3",
+      "version": "0.50.0",
       "dependencies": {
         "css-parse": {
           "version": "1.7.0"
@@ -62,7 +70,7 @@
           "version": "0.3.5"
         },
         "debug": {
-          "version": "2.1.0",
+          "version": "2.1.1",
           "dependencies": {
             "ms": {
               "version": "0.6.2"
@@ -92,7 +100,7 @@
           }
         },
         "source-map": {
-          "version": "0.1.40",
+          "version": "0.1.43",
           "dependencies": {
             "amdefine": {
               "version": "0.1.0"
