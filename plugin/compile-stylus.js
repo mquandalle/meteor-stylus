@@ -21,12 +21,12 @@ Plugin.registerSourceHandler("styl", {archMatching: 'web'}, function (compileSte
     compileStep.error({
       message: "Stylus compiler error: " + msg
     });
-  }
+  };
 
   try {
     compiler.render(function (err, css) {
       if (err) {
-        return errCb(err.message)
+        return errCb(err.message);
       }
       var sourceMap = compiler.sourcemap;
       sourceMap.sourcesContent = [source];

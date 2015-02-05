@@ -8,44 +8,48 @@ var setDomElement = function (domStr, testFunc) {
   document.body.removeChild(div);
 };
 
+var setStylusClass = function (className, testFunc) {
+  return setDomElement('<p class="stylus-' + className + '"></p>', testFunc);
+};
+
 Tinytest.add("stylus - presence", function(test) {
-  setDomElement('<p class="stylus-dashy-left-border"></p>', function () {
+  setStylusClass('dashy-left-border', function () {
     var leftBorder = getStyleProperty(this, 'border-left-style');
     test.equal(leftBorder, "dashed");
   });
 });
 
 Tinytest.add("stylus - relative @import", function(test) {
-  setDomElement('<p class="stylus-relative-import-dashy-border"></p>', function () {
+  setStylusClass('relative-import-dashy-border', function () {
     test.equal(getStyleProperty(this, 'border-left-style'), "dashed");
   });
 
-  setDomElement('<p class="stylus-overwrite-size"></p>', function () {
+  setStylusClass('overwrite-size', function () {
     test.equal(getStyleProperty(this, 'font-size'), "20px");
   });
 });
 
 Tinytest.add("stylus - absolute @import", function(test) {
-  setDomElement('<p class="stylus-absolute-import-dashy-border"></p>', function () {
+  setStylusClass('absolute-import-dashy-border', function () {
     test.equal(getStyleProperty(this, 'border-left-style'), "dashed");
   });
 });
 
 Tinytest.add("stylus - nib", function(test) {
-  setDomElement('<p class="stylus-nib-overflow-ellipsis"></p>', function () {
+  setStylusClass('nib-overflow-ellipsis', function () {
     test.equal(getStyleProperty(this, 'overflow'), "hidden");
     test.equal(getStyleProperty(this, 'text-overflow'), "ellipsis");
   });
 });
 
 Tinytest.add("stylus - jeet", function(test) {
-  setDomElement('<p class="stylus-jeet-center"></p>', function () {
+  setStylusClass('jeet-center', function () {
     test.equal(getStyleProperty(this, 'max-width'), "1337px");
   });
 });
 
 Tinytest.add("stylus - rupture", function(test) {
-  setDomElement('<p class="stylus-rubture-aboveOneIsBlack"></p>', function () {
+  setStylusClass('rubture-aboveOneIsBlack', function () {
     test.equal(getStyleProperty(this, 'color'), "rgb(0, 0, 0)");
   });
 });
