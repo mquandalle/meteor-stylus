@@ -49,7 +49,25 @@ Tinytest.add("stylus - jeet", function(test) {
 });
 
 Tinytest.add("stylus - rupture", function(test) {
-  setStylusClass('rubture-aboveOneIsBlack', function () {
+  setStylusClass('rupture-aboveOneIsBlack', function () {
     test.equal(getStyleProperty(this, 'color'), "rgb(0, 0, 0)");
+  });
+});
+
+Tinytest.add("stylus - axis", function(test) {
+  setStylusClass('axis-pre', function () {
+    test.equal(getStyleProperty(this, 'white-space'), "pre-wrap");
+  });
+});
+
+Tinytest.add("stylus - typographic", function(test) {
+  setDomElement('<h1 class="stylus-typographic-h1"></h1>', function () {
+    test.equal(getStyleProperty(this, 'font-family'), "serif");
+  })
+});
+
+Tinytest.add("stylus - autoprefixer", function(test) {
+  setStylusClass('autoprefixer-columns', function () {
+    test.equal(getStyleProperty(this, '-webkit-column-count'), "2");
   });
 });

@@ -15,7 +15,10 @@ Package._transitional_registerBuildPlugin({
     stylus: "0.50.0",
     nib: "1.1.0",
     jeet: "6.1.2",
-    rupture: "0.6.1"
+    rupture: "0.6.1",
+    axis: "0.3.0",
+    typographic: "1.1.0",
+    "autoprefixer-stylus": "0.5.0"
   }
 });
 
@@ -29,6 +32,9 @@ Package.on_test(function (api) {
     'tests/nib_.styl',
     'tests/jeet_.styl',
     'tests/rupture_.styl',
+    'tests/axis_.styl',
+    'tests/typographic_.styl',
+    'tests/autoprefixer_.styl',
     'tests/tinytest.js'
   ],'client');
 });

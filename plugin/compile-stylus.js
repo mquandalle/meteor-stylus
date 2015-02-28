@@ -4,6 +4,9 @@ var nib = Npm.require('nib');
 var jeet = Npm.require('jeet');
 var rupture = Npm.require('rupture');
 var path = Npm.require('path');
+var axis = Npm.require('axis');
+var typographic = Npm.require('typographic');
+var autoprefixer = Npm.require('autoprefixer-stylus');
 var Future = Npm.require('fibers/future');
 
 Plugin.registerSourceHandler("styl", {archMatching: 'web'}, function (compileStep) {
@@ -12,6 +15,9 @@ Plugin.registerSourceHandler("styl", {archMatching: 'web'}, function (compileSte
     .use(nib())
     .use(jeet())
     .use(rupture())
+    .use(axis())
+    .use(typographic())
+    .use(autoprefixer())
     .set('filename', compileStep.inputPath)
     .set('sourcemap', {comment: false})
     .include(path.dirname(compileStep._fullInputPath)) // relative @import
