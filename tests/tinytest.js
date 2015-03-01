@@ -62,7 +62,7 @@ Tinytest.add("stylus - axis", function(test) {
 
 Tinytest.add("stylus - typographic", function(test) {
   setDomElement('<h1 class="stylus-typographic-h1"></h1>', function () {
-    test.equal(getStyleProperty(this, 'font-family'), "serif");
+    test.equal(getStyleProperty(this, 'font-family'), "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif");
   })
 });
 
