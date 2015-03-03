@@ -62,10 +62,21 @@ Tinytest.add("stylus - axis", function(test) {
 
 Tinytest.add("stylus - typographic", function(test) {
   setDomElement('<h1 class="stylus-typographic-h1"></h1>', function () {
-    test.equal(getStyleProperty(this, 'font-family'), "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif");
+    // Different browser agents format the `font-family` string in different
+    // ways -- for instance Chrome uses single quote ' whereas Firefox uses
+    // double quotes " to wrapped multi-words font names. To handle all the case
+    // we interpret the given string as a list of font independently of the
+    // browser specifics formatting.
+    var fontString = getStyleProperty(this, 'font-family');
+    var fontList = fontString.replace(/['"]/g, '').split(/, ?/);
+    var expected = ['Garamond', 'Baskerville', 'Baskerville Old Face',
+                    'Hoefler Text', 'Times New Roman', 'serif'];
+    test.equal(fontList, expected);
   })
 });
 
+// XXX This test only passes on Chrome! It should work on other browsers as
+// well!
 Tinytest.add("stylus - autoprefixer", function(test) {
   setStylusClass('autoprefixer-columns', function () {
     test.equal(getStyleProperty(this, '-webkit-column-count'), "2");
