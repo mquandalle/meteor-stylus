@@ -1,4 +1,4 @@
-## Next
+## v1.1.0
 
 * Add Axis, Typographic, and Autoprefixer
 
