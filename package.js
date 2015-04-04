@@ -16,8 +16,8 @@ Package._transitional_registerBuildPlugin({
     nib: "1.1.0",
     jeet: "6.1.2",
     rupture: "0.6.1",
-    axis: "0.3.0",
-    typographic: "1.1.0",
+    axis: "0.3.1",
+    typographic: "2.9.1",
     "autoprefixer-stylus": "0.5.0"
   }
 });

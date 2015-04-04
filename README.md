@@ -28,7 +28,7 @@ its path by `/`.
 
 Expressive, dynamic, robust CSS. Curly braces and semicolons: optional.
 
-### [Nib](http://visionmedia.github.io/nib/) 1.0.4
+### [Nib](http://tj.github.io/nib/) 1.1.0
 
 Nib is a popular Stylus package that adds many helpful, basic, utility mixins.
 
@@ -47,13 +47,13 @@ It's important to remember to include it in your styles, like so:
 
 Simple media queries for Stylus. Must be imported before use.
 
-### [Typographic](https://github.com/corysimmons/typographic) 1.1.0
+### [Typographic](https://github.com/corysimmons/typographic) 2.9.1
 
 Quick and dirty responsive typography for the rest of us. Offers great selection
 of common font stacks, and several ways to apply them to your document. Must be
 imported before use.
 
-### [Axis](http://axis.netlify.com/) 0.3.0
+### [Axis](http://axis.netlify.com/) 0.3.1
 
 A higher-level Stylus mixin library with lots of extra functionality. Be sure
 not to miss the normalize() mixin. Axis uses and imports Nib, so Nib has been

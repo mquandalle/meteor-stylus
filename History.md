@@ -1,3 +1,8 @@
+## v.NEXT
+
+* Bump Typographic version (from 1.1.0 to 2.9.1)
+* Bump Axis version (from 0.3.0 to 0.3.1)
+
 ## v1.1.0
 
 * Add Axis, Typographic, and Autoprefixer
