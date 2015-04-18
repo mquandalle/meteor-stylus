@@ -1,6 +1,6 @@
 # Stylus for Meteor [![Build Status][travis-img]][travis-url]
 
-[Stylus](http://learnboost.github.io/stylus) is a CSS pre-processor with a
+[Stylus](http://stylus-lang.com/) is a CSS pre-processor with a
 simple syntax and expressive dynamic behaviour. It allows for more compact
 stylesheets and helps reduce code duplication in CSS files.
 
@@ -24,7 +24,7 @@ its path by `/`.
 
 ## Included packages
 
-### [Stylus](http://learnboost.github.io/stylus/) 0.50.0
+### [Stylus](http://stylus-lang.com/) 0.50.0
 
 Expressive, dynamic, robust CSS. Curly braces and semicolons: optional.
 
@@ -43,7 +43,7 @@ It's important to remember to include it in your styles, like so:
 @import 'jeet'
 ```
 
-### [Rupture](https://github.com/jenius/rupture) 0.6.1
+### [Rupture](http://jenius.github.io/rupture/) 0.6.1
 
 Simple media queries for Stylus. Must be imported before use.
 
