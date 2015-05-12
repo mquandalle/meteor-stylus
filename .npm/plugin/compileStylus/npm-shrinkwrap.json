@@ -1,19 +1,25 @@
 {
   "dependencies": {
     "autoprefixer-stylus": {
-      "version": "0.5.0",
+      "version": "0.6.0",
       "dependencies": {
         "autoprefixer-core": {
-          "version": "4.0.2",
+          "version": "5.1.11",
           "dependencies": {
+            "browserslist": {
+              "version": "0.2.0"
+            },
+            "num2fraction": {
+              "version": "1.1.0"
+            },
             "caniuse-db": {
-              "version": "1.0.30000081"
+              "version": "1.0.30000161"
             },
             "postcss": {
-              "version": "3.0.7",
+              "version": "4.0.6",
               "dependencies": {
                 "source-map": {
-                  "version": "0.1.43",
+                  "version": "0.2.0",
                   "dependencies": {
                     "amdefine": {
                       "version": "0.1.0"
@@ -21,7 +27,7 @@
                   }
                 },
                 "js-base64": {
-                  "version": "2.1.7"
+                  "version": "2.1.8"
                 }
               }
             }
@@ -43,7 +49,7 @@
       }
     },
     "axis": {
-      "version": "0.3.1"
+      "version": "0.3.2"
     },
     "jeet": {
       "version": "6.1.2"
@@ -106,7 +112,7 @@
       "version": "0.6.1"
     },
     "stylus": {
-      "version": "0.50.0",
+      "version": "0.51.1",
       "dependencies": {
         "css-parse": {
           "version": "1.7.0"
@@ -115,10 +121,10 @@
           "version": "0.3.5"
         },
         "debug": {
-          "version": "2.1.1",
+          "version": "2.2.0",
           "dependencies": {
             "ms": {
-              "version": "0.6.2"
+              "version": "0.7.1"
             }
           }
         },
@@ -135,7 +141,7 @@
               "version": "0.3.0",
               "dependencies": {
                 "lru-cache": {
-                  "version": "2.5.0"
+                  "version": "2.6.2"
                 },
                 "sigmund": {
                   "version": "1.0.0"
@@ -155,7 +161,7 @@
       }
     },
     "typographic": {
-      "version": "2.9.1"
+      "version": "2.9.3"
     }
   }
 }

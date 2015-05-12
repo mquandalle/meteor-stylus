@@ -24,7 +24,7 @@ its path by `/`.
 
 ## Included packages
 
-### [Stylus](http://stylus-lang.com/) 0.50.0
+### [Stylus](http://stylus-lang.com/) 0.51.1
 
 Expressive, dynamic, robust CSS. Curly braces and semicolons: optional.
 
@@ -47,19 +47,19 @@ It's important to remember to include it in your styles, like so:
 
 Simple media queries for Stylus. Must be imported before use.
 
-### [Typographic](https://github.com/corysimmons/typographic) 2.9.1
+### [Typographic](https://github.com/corysimmons/typographic) 2.9.3
 
 Quick and dirty responsive typography for the rest of us. Offers great selection
 of common font stacks, and several ways to apply them to your document. Must be
 imported before use.
 
-### [Axis](http://axis.netlify.com/) 0.3.1
+### [Axis](http://axis.netlify.com/) 0.3.2
 
 A higher-level Stylus mixin library with lots of extra functionality. Be sure
 not to miss the normalize() mixin. Axis uses and imports Nib, so Nib has been
 removed from this package. This might not require an import statement.
 
-### [Autoprefixer](https://github.com/jenius/autoprefixer-stylus) 0.5.0
+### [Autoprefixer](https://github.com/jenius/autoprefixer-stylus) 0.6.0
 
 An autoprefixer plugin for Stylus. Will also remove unnecessary prefixes if
 there is widespread browser support. It is automatic and does not need to be

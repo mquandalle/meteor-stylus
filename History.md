@@ -1,7 +1,9 @@
-## v.NEXT
+## v1.1.1
 
-* Bump Typographic version (from 1.1.0 to 2.9.1)
-* Bump Axis version (from 0.3.0 to 0.3.1)
+* Bump Stylus version (from 0.50.0 to 0.51.1)
+* Bump Typographic version (from 1.1.0 to 2.9.3)
+* Bump Axis version (from 0.3.0 to 0.3.2)
+* Bump Autoprefixer version (from 0.5.0 to 0.6.0)
 
 ## v1.1.0
 
