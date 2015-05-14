@@ -35,6 +35,20 @@ Tinytest.add("stylus - absolute @import", function(test) {
   });
 });
 
+// XXX This test only passes on Chrome! It should work on other browsers as
+// well!
+Tinytest.add("stylus - autoprefixer", function(test) {
+  setStylusClass('autoprefixer-columns', function () {
+    test.equal(getStyleProperty(this, '-webkit-column-count'), "2");
+  });
+});
+
+Tinytest.add("stylus - axis", function(test) {
+  setStylusClass('axis-pre', function () {
+    test.equal(getStyleProperty(this, 'white-space'), "pre-wrap");
+  });
+});
+
 Tinytest.add("stylus - nib", function(test) {
   setStylusClass('nib-overflow-ellipsis', function () {
     test.equal(getStyleProperty(this, 'overflow'), "hidden");
@@ -48,15 +62,15 @@ Tinytest.add("stylus - jeet", function(test) {
   });
 });
 
-Tinytest.add("stylus - rupture", function(test) {
-  setStylusClass('rupture-aboveOneIsBlack', function () {
-    test.equal(getStyleProperty(this, 'color'), "rgb(0, 0, 0)");
+Tinytest.add("stylus - lost", function(test) {
+  setStylusClass('lost-center', function () {
+    test.equal(getStyleProperty(this, 'max-width'), "42px");
   });
 });
 
-Tinytest.add("stylus - axis", function(test) {
-  setStylusClass('axis-pre', function () {
-    test.equal(getStyleProperty(this, 'white-space'), "pre-wrap");
+Tinytest.add("stylus - rupture", function(test) {
+  setStylusClass('rupture-aboveOneIsBlack', function () {
+    test.equal(getStyleProperty(this, 'color'), "rgb(0, 0, 0)");
   });
 });
 
@@ -72,13 +86,5 @@ Tinytest.add("stylus - typographic", function(test) {
     var expected = ['Garamond', 'Baskerville', 'Baskerville Old Face',
                     'Hoefler Text', 'Times New Roman', 'serif'];
     test.equal(fontList, expected);
-  })
-});
-
-// XXX This test only passes on Chrome! It should work on other browsers as
-// well!
-Tinytest.add("stylus - autoprefixer", function(test) {
-  setStylusClass('autoprefixer-columns', function () {
-    test.equal(getStyleProperty(this, '-webkit-column-count'), "2");
   });
 });

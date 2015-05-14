@@ -13,12 +13,18 @@ Package._transitional_registerBuildPlugin({
   ],
   npmDependencies: {
     stylus: "0.51.1",
-    nib: "1.1.0",
-    jeet: "6.1.2",
-    rupture: "0.6.1",
+    "autoprefixer-stylus": "0.6.0",
     axis: "0.3.2",
-    typographic: "2.9.3",
-    "autoprefixer-stylus": "0.6.0"
+    jeet: "6.1.2",
+    // Latest versions of lost don't support stylus directly but rely on PostCSS
+    // instead. As explained by the author in
+    // https://github.com/corysimmons/lost/issues/102 the latest version with
+    // direct stylus support is v5.1.6 used bellow.
+    // XXX We should find a way to support v6+
+    lost: "5.1.6",
+    nib: "1.1.0",
+    rupture: "0.6.1",
+    typographic: "2.9.3"
   }
 });
 
@@ -29,12 +35,13 @@ Package.on_test(function (api) {
     'tests/importer.styl',
     'tests/relative.import.styl',
     'tests/absolute.import.styl',
-    'tests/nib_.styl',
-    'tests/jeet_.styl',
-    'tests/rupture_.styl',
-    'tests/axis_.styl',
-    'tests/typographic_.styl',
     'tests/autoprefixer_.styl',
+    'tests/axis_.styl',
+    'tests/jeet_.styl',
+    'tests/lost_.styl',
+    'tests/nib_.styl',
+    'tests/rupture_.styl',
+    'tests/typographic_.styl',
     'tests/tinytest.js'
   ],'client');
 });
